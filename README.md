@@ -4,10 +4,29 @@ To develop day-ahead net load predictors that do not need any behind the meter (
 ## How to Implement
 Before running the code, all aforementioned data should be prepared. To disaggregate net load traces into estimated solar generation and customer consumption traces, please refer to [disaggregation](http://www.ece.sunysb.edu/~yzhao/PZ_SGC22.pdf). To obtain meteorological data, please use API from [NSRDB](https://nsrdb.nrel.gov/).
 
-The Ithaca dataset (data_Ithaca.csv) contains:
+The information used (data_Ithaca.csv) includes:
 
 1.  Load information:
-*   ground truth residential customer load
-*   estimated residential customer load
-*   ground truth solar generation
-*   estimated solar generation
+*   load: ground truth residential customer load
+*   dis_load: estimated residential customer load
+*   solar: ground truth solar generation
+*   unsup_solar: estimated solar generation
+*   grid: ground truth net load of residential customer
+
+2.  Time information:
+*   timeslot: time slot of the day (15 minutes)
+*   weekday: day of the week
+
+3.  Meteorological information:
+*   temp: temperature
+*   dew: dew point
+*   wind: wind speed
+*   hum: relative humidity
+*   press: air pressure
+*   water: precipitable water
+*   zenith: zenith angle
+*   GHI: global horizontal irradiance
+*   cloud: cloud type (categorical)
+
+## Forecasting Procedure
+
