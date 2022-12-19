@@ -29,4 +29,10 @@ The information used (data_Ithaca.csv) includes:
 *   cloud: cloud type (categorical)
 
 ## Forecasting Procedure
+1.  Run Solar_Forecasting.ipynb to train predictor for aggregate level solar generation forecasting. 
+2.  Run Load_Forecasting.ipynb to train two different predictors (LSTM & FCNN) for aggregate level residential customer consumption forecasting. 
+3.  Run Clustering.ipynb to perform hierarchical clustering given a relatively larger group of residential customers.
 
+## Evaluation
+Run Evaluation.ipynb to calculate two metrics, Mean Squared Error (MSE) and hourly Normalized Mean Absolute Error (NMAE).
+In order to evaluate net load forecasting accuracy, net_load = prediction_load - prediction_solar needs to done first.
